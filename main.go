@@ -21,19 +21,19 @@ func Solution(S string) (string, error) {
 			consecutiveWinsByX++
 			consecutiveWinsByO = 0
 
-			if consecutiveWinsByX == 3 {
-				consecutiveWinsByX = 0
-			}
 		case 'O':
 			totalWinsByO++
 			consecutiveWinsByO++
 			consecutiveWinsByX = 0
 
-			if consecutiveWinsByO == 3 {
-				consecutiveWinsByO = 0
-			}
 		default:
 			return "", ErrInvalidChars
+		}
+
+		if consecutiveWinsByX == 3 {
+			consecutiveWinsByX = 0
+		} else if consecutiveWinsByO == 3 {
+			consecutiveWinsByO = 0
 		}
 	}
 

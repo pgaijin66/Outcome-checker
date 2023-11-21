@@ -2,6 +2,12 @@
 
 This program provides a function (`Solution`) to determine the winner of a game based on a given string representing the game's outcome. The game involves two players, 'X' and 'O,' and the function calculates the winner or declares a tie based on the provided outcomes.
 
+# Table of contents
+
+- [Outcome Checker](#outcome-checker)
+  - [Usage](#usage)
+  - [Tests](#tests)
+  - [Time and Space complexity](#time-and-space-complexity)
 
 ## Usage
 
@@ -36,3 +42,9 @@ go test -v
 PASS
 ok  	app	0.215s
 ```
+
+## Time and Space complexity
+
+Time complexity of the program is `O(N)` as the time increases as the number of input increases.
+
+Space complexity of the program is `O(1)` as the memory does not grow as with the input size.
