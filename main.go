@@ -11,11 +11,8 @@ var (
 )
 
 func Solution(S string) (string, error) {
-	totalWinsByX := 0
-	totalWinsByO := 0
-
-	consecutiveWinsByX := 0
-	consecutiveWinsByO := 0
+	totalWinsByX, totalWinsByO := 0, 0
+	consecutiveWinsByX, consecutiveWinsByO := 0, 0
 
 	for _, win := range S {
 		switch win {
@@ -38,7 +35,6 @@ func Solution(S string) (string, error) {
 		default:
 			return "", ErrInvalidChars
 		}
-
 	}
 
 	if totalWinsByX > totalWinsByO {
